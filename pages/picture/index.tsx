@@ -1,13 +1,14 @@
 import { Main } from "@/components/layouts/Main"
 
-const Index = () => {
+
+
+const Picture = () => {
     return (
         <Main>
-
-            dgdgsgsg
+            Picture
         </Main>
     )
 }
 
 
-export default Index
+export default Picture
