@@ -3,40 +3,30 @@ import {useState} from "react";
 import Link from 'next/link'
 
 
+type NavbarType = {
+    flag: boolean
+}
 
-
-export const Navbar = () => {
-    const [open, setOpen] = useState(false)
-
-    const clickHandler = () => {
-        setOpen(!open)
-    }
-
+export const Navbar: React.FC<NavbarType> = ({flag}) => {
     return (
-        <div className={stls.container}>
-            <header className={stls.header}>
-                <button className={stls.btn} onClick={clickHandler}>Menu</button>
-            </header>
-
+        <>
             {
-                open &&
-                    <div className={stls.content}>
-                        <ul className={stls.list}>
-                            <li className={stls.item}>
-                                <Link href="/tracks">
-                                    <a>Track</a>
-                                </Link>
-                                </li>
-                            <li className={stls.item}>
-                                <Link href="/picture">
-                                    <a >Picture</a>
-                                </Link>
+                flag && <div className={stls.content}>
+                    <ul className={stls.list}>
+                        <li className={stls.item}>
+                            <Link href="/tracks">
+                                <a>Track</a>
+                            </Link>
+                        </li>
+                        <li className={stls.item}>
+                            <Link href="/picture">
+                                <a>Picture</a>
+                            </Link>
 
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
+                </div>
             }
-
-        </div>
+        </>
     )
 }

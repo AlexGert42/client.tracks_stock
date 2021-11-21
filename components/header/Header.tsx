@@ -1,11 +1,15 @@
-import stls from "@/styles/conponents/Navbar.module.sass";
+import stls from "@/styles/conponents/Header.module.sass";
 
 
-export const Header = () => {
+type HeaderType = {
+    clickHandler: () => void
+}
+
+export const Header: React.FC<HeaderType> = ({clickHandler}) => {
 
     return (
-       <div>
-
-       </div>
+           <header className={stls.container}>
+               <button className={stls.btn} onClick={clickHandler}>Menu</button>
+           </header>
     )
 }
