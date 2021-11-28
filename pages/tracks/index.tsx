@@ -6,12 +6,12 @@ import {ITrack} from "@/types/track";
 import {TrackList} from "@/section/trackList/TrackList";
 import {Button} from "@/components/common/button/Button";
 import {UseTypedSelector} from "../../helpers/useTypedSelector";
+import {useAction} from "../../helpers/useAction";
 
 
 const Tracks = () => {
     const router = useRouter()
 
-    const {} = UseTypedSelector(state => state.player)
 
     const tracks: ITrack[] | [] = [
         {
