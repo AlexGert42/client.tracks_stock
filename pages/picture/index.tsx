@@ -1,11 +1,13 @@
-import { Main } from "@/components/layouts/Main"
-
+import {Content} from "@/components/layouts/content/Content"
+import {Main} from "@/components/layouts/Main"
 
 
 const Picture = () => {
     return (
         <Main>
-            Picture
+            <Content>
+                Picture
+            </Content>
         </Main>
     )
 }

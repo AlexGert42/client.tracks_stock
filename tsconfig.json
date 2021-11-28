@@ -7,6 +7,12 @@
       ],
       "@/styles/*": [
         "styles/*"
+      ],
+      "@/types/*": [
+        "types/*"
+      ],
+      "@/section/*": [
+        "components/section/*"
       ]
     },
     "target": "es5",
