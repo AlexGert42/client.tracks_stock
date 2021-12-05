@@ -4,10 +4,10 @@ import {PlayerActionType, PlayerState, TypePlayerActions} from "@/types/player"
 
 const initialState: PlayerState = {
     active: null,
-    volume: 0,
+    volume: 100,
     duration: 0,
     currentTime: 0,
-    pause: false
+    pause: true
 }
 
 export const playerReducer = (state = initialState, action: TypePlayerActions): PlayerState => {

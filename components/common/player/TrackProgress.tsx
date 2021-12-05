@@ -3,21 +3,21 @@ import stls from '@/styles/common/player/TrackProgress.module.sass'
 interface TypeTrackProgress {
     left: number
     right: number
-    onChange: (e: number) => void
+    change: (e: any) => void
 }
 
-export const TrackProgress: React.FC<TypeTrackProgress> = ({left, right, onChange}) => {
+export const TrackProgress: React.FC<TypeTrackProgress> = ({left, right, change}) => {
     return (
         <div className={stls.container}>
             <input
                 className={stls.input}
                 type="range"
                 max={right}
-                min={left}
+                min={0}
                 value={left}
-                onChange={() => onChange}
+                onChange={change}
             />
-            <div className={stls.progress}>{left} | {right}</div>
+            <div className={stls.progress}>{Math.ceil(left)} | {Math.ceil(right)}</div>
         </div>
     )
 }
